@@ -12,7 +12,7 @@ class TodoParser {
 
   // Returns true if string s is a todo-item
   private isTodo(s: string): boolean {
-    const r = /\s*- \[ \].*/g;
+    const r = /\s*- \[[ ?>\/]\].*/g; //PHI: Patch to get unfinished, postponed and question items rolled over
     return r.test(s);
   }
 
